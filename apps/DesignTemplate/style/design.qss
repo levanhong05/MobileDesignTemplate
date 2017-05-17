@@ -1,0 +1,301 @@
+Line {
+    background-color: rgb(0, 170, 255);
+}
+
+QComboBox
+{
+    selection-background-color: #ffaa00;
+    border-style: solid;
+    border: 2px solid lightgray;
+    border-radius: 12px;
+    padding: 1px 3px 1px 3px;
+    min-width: 4em;
+}
+
+QComboBox:hover, QSpinBox:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+
+QComboBox:on
+{
+    padding-top: 3px;
+    padding-left: 4px;
+    selection-background-color: #ffaa00;
+}
+
+QComboBox QAbstractItemView
+{
+    border: 2px solid darkgray;
+    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+
+QComboBox::drop-down
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+ }
+
+QComboBox::down-arrow
+{
+    image: url(:/design/style/down_arrow.png);
+}
+
+QSpinBox
+{
+    border-width: 3;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    padding: 1px 3px 1px 3px;
+}
+
+QSpinBox::up-button
+{
+    subcontrol-origin: border;
+    subcontrol-position: top right; /* position at the top right corner */
+
+    width: 16px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+    border-image: url(:/design/style/spinup.png) 1;
+    border-width: 1px;
+}
+
+QSpinBox::up-button:hover
+{
+    border-image: url(:/design/style/spinup_hover.png) 1;
+}
+
+QSpinBox::up-button:pressed
+{
+    border-image: url(:/design/style/spinup_pressed.png) 1;
+}
+
+QSpinBox::up-arrow
+{
+    image: url(:/design/style/up_arrow.png);
+    width: 7px;
+    height: 7px;
+}
+
+QSpinBox::down-button
+{
+    subcontrol-origin: border;
+    subcontrol-position: bottom right; /* position at bottom right corner */
+
+    width: 16px;
+    border-image: url(:/design/style/spindown.png) 1;
+    border-width: 1px;
+    border-top-width: 0;
+}
+
+QSpinBox::down-button:hover
+{
+    border-image: url(:/design/style/spindown_hover.png) 1;
+}
+
+QSpinBox::down-button:pressed
+{
+    border-image: url(:/design/style/spindown_pressed.png) 1;
+}
+
+QSpinBox::down-arrow
+{
+    image: url(:/design/style/down_arrow.png);
+    width: 7px;
+    height: 7px;
+}
+
+QCheckBox {
+    spacing: 5px;
+    padding: 3px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QCheckBox::indicator:unchecked {
+    image: url(:/design/style/checkbox_unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/design/style/checkbox_unchecked_hover.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+    image: url(:/design/style/checkbox_unchecked_pressed.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/design/style/checkbox_checked.png);
+}
+
+QCheckBox::indicator:checked:hover {
+    image: url(:/design/style/checkbox_checked_hover.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+    image: url(:/design/style/checkbox_checked_pressed.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+    image: url(:/design/style/checkbox_indeterminate_hover.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+    image: url(:/design/style/checkbox_indeterminate_pressed.png);
+}
+
+QProgressBar {
+    border: 2px solid #1579ab;
+    border-radius: 5px;
+}
+
+QProgressBar::chunk {
+    background-color: #00aaff;
+    width: 10px;
+}
+
+QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    min-width: 80px;
+    padding: 5px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+    border: 2px solid #1579ab;
+    border-radius: 6px;
+    min-width: 80px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    border: 2px solid #00aaff;
+    border-radius: 6px;
+    min-width: 80px;
+    padding: 5px;
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:open { /* when the button has its menu open */
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton::menu-indicator {
+    image: url(menu_indicator.png);
+    subcontrol-origin: padding;
+    subcontrol-position: bottom right;
+}
+
+QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
+    position: relative;
+    top: 2px; left: 2px; /* shift the arrow by 2 px */
+}
+
+QRadioButton {
+    padding: 3px;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QRadioButton::indicator::unchecked {
+    image: url(:/design/style/radiobutton_unchecked.png);
+}
+
+QRadioButton::indicator:unchecked:hover {
+    image: url(:/design/style/radiobutton_unchecked_hover.png);
+}
+
+QRadioButton::indicator:unchecked:pressed {
+    image: url(:/design/style/radiobutton_unchecked_pressed.png);
+}
+
+QRadioButton::indicator::checked {
+    image: url(:/design/style/radiobutton_checked.png);
+}
+
+QRadioButton::indicator:checked:hover {
+    image: url(:/design/style/radiobutton_checked_hover.png);
+}
+
+QRadioButton::indicator:checked:pressed {
+    image: url(:/design/style/radiobutton_checked_pressed.png);
+}
+
+QLineEdit[readOnly="true"] { color: gray }
+
+QLineEdit:!focus
+{
+  //border: 1px solid transparent;
+  border-bottom-color: gray;
+  background: transparent;
+}
+
+QLineEdit:focus
+{
+  background: transparent;
+  border-bottom-color: rgb(85, 255, 255);
+}
+
+QScrollBar:horizontal {
+    border: 2px solid green;
+    background: cyan;
+    height: 15px;
+    margin: 0px 40px 0 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: gray;
+    min-width: 20px;
+}
+
+QScrollBar::add-line:horizontal {
+    background: blue;
+    width: 16px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+    border: 2px solid black;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: magenta;
+    width: 16px;
+    subcontrol-position: top right;
+    subcontrol-origin: margin;
+    border: 2px solid black;
+    position: absolute;
+    right: 20px;
+}
+
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    width: 3px;
+    height: 3px;
+    background: pink;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
